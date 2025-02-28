@@ -42,6 +42,15 @@
         border-top: 2px dashed rgba(55, 82, 253, 0.2);
         margin: 25px 0;
       }
+      .history-style {
+        padding: 16px;
+        background-color: rgb(244, 247, 255);
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        line-height: 24px;
+        border-radius: 8px;
+        margin-bottom: 12px;
+      }
     </style>
   </head>
   <body class="bg-transparent font-pop">
@@ -142,7 +151,7 @@
             >
               ShopEase
             </h3>
-            <h2 class="font-medium lg:text-2xl text-black mb-4">
+            <h2 id="fixMobile" class="font-medium lg:text-2xl text-black mb-4">
               Fix Mobile Button Issue
             </h2>
             <p class="bg-white p-4 text-sm lg:text-base rounded-md">
@@ -169,7 +178,7 @@
             >
               CloudSync
             </h3>
-            <h2 class="font-medium lg:text-2xl text-black mb-4">
+            <h2 id="addDark" class="font-medium lg:text-2xl text-black mb-4">
               Add Dark Mode
             </h2>
             <p class="bg-white p-4 text-sm lg:text-base rounded-md">
@@ -196,7 +205,10 @@
             >
               SwiftPay
             </h3>
-            <h2 class="font-medium lg:text-2xl text-black mb-4">
+            <h2
+              id="optimizeHome"
+              class="font-medium lg:text-2xl text-black mb-4"
+            >
               Optimize Home page
             </h2>
             <p class="bg-white p-4 text-sm lg:text-base rounded-md">
@@ -223,7 +235,10 @@
             >
               Meta
             </h3>
-            <h2 class="font-medium lg:text-2xl text-black mb-4">
+            <h2
+              id="addNewEmoji"
+              class="font-medium lg:text-2xl text-black mb-4"
+            >
               Add new emoji 🤲
             </h2>
             <p class="bg-white p-4 text-sm lg:text-base rounded-md">
@@ -250,7 +265,10 @@
             >
               Google LLC
             </h3>
-            <h2 class="font-medium lg:text-2xl text-black mb-4">
+            <h2
+              id="integrateApi"
+              class="font-medium lg:text-2xl text-black mb-4"
+            >
               Integrate OpenAI API
             </h2>
             <p class="bg-white p-4 text-sm lg:text-base rounded-md">
@@ -277,7 +295,7 @@
             >
               Glassdoar
             </h3>
-            <h2 class="font-medium lg:text-2xl text-black mb-4">
+            <h2 id="improveJob" class="font-medium lg:text-2xl text-black mb-4">
               Improve Job searching
             </h2>
             <p class="bg-white p-4 text-sm lg:text-base rounded-md">
@@ -313,14 +331,13 @@
         </div>
         <div class="text-center">
           <button
+            id="clearHistory"
             class="btn bg-[#3752fd] px-4 py-2 text-white hover:bg-[#3752fd] mb-8"
           >
             Clear History
           </button>
         </div>
-        <p class="w-[308px] bg-[#f4f7ff] p-4 rounded-xl">
-          You have Complete The Task <span id="taskAdd"></span> at 12:48:15 PM
-        </p>
+        <div id="history-container"></div>
       </div>
     </section>
     <script src="./javaScript/script.js"></script>

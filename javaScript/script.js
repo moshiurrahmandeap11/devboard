@@ -18,8 +18,6 @@ function allInOne(countedBtn) {
   const headerNum = document.getElementById("headerNumber").innerText;
   const convertedNumber = parseInt(headerNum) + 1;
   document.getElementById("headerNumber").innerText = convertedNumber;
-//   add task
-    
 
   //   button disable
   document.getElementById(countedBtn).disabled =true;
@@ -39,3 +37,108 @@ for (let countedBtn of completeBtn){
     });
 }
 
+
+// history part
+
+// Shopease 
+document.getElementById("ShopEase").addEventListener('click', function(){
+    const addDarkTask = document.getElementById("fixMobile").innerText;
+    const currentTime = new Date().toLocaleTimeString();
+
+    const fullComment = `You have Complete The Task <strong>${addDarkTask}</strong> at ${currentTime}`;
+
+    const commentContainer = document.getElementById("history-container");
+    const commentElement = document.createElement("p");
+    commentElement.classList.add("history-style");
+    commentElement.innerHTML = fullComment;
+
+    commentContainer.appendChild(commentElement); 
+});
+
+// cloudSync
+document.getElementById("cloudSync").addEventListener("click", function () {
+  const addDarkTask = document.getElementById("addDark").innerText; 
+  const currentTime = new Date().toLocaleTimeString();
+
+  const fullComment = `You have Complete The Task <strong>${addDarkTask}</strong> at ${currentTime}`;
+
+  const commentContainer = document.getElementById("history-container"); 
+  const commentElement = document.createElement("p");
+  commentElement.classList.add('history-style')
+  commentElement.innerHTML = fullComment; 
+
+  commentContainer.appendChild(commentElement); 
+});
+
+
+// swiftPay
+document.getElementById("swiftPay").addEventListener('click', function(){
+    const addDarkTask = document.getElementById("optimizeHome").innerText;
+    const currentTime = new Date().toLocaleTimeString();
+
+    const fullComment = `You have Complete The Task <strong>${addDarkTask}</strong> at ${currentTime}`;
+
+    const commentContainer = document.getElementById("history-container");
+    const commentElement = document.createElement("p");
+    commentElement.classList.add("history-style");
+    commentElement.innerHTML = fullComment;
+
+    commentContainer.appendChild(commentElement); 
+});
+
+// metaID
+document.getElementById("metaID").addEventListener('click', function(){
+    const addDarkTask = document.getElementById("addNewEmoji").innerText;
+    const currentTime = new Date().toLocaleTimeString();
+
+    const fullComment = `You have Complete The Task <strong>${addDarkTask}</strong> at ${currentTime}`;
+
+    const commentContainer = document.getElementById("history-container");
+    const commentElement = document.createElement("p");
+    commentElement.classList.add("history-style");
+    commentElement.innerHTML = fullComment;
+
+    commentContainer.appendChild(commentElement); 
+})
+
+// googleLLC
+document.getElementById("googleLLC").addEventListener('click', function(){
+    const addDarkTask = document.getElementById("integrateApi").innerText;
+    const currentTime = new Date().toLocaleTimeString();
+
+    const fullComment = `You have Complete The Task <strong>${addDarkTask}</strong> at ${currentTime}`;
+
+    const commentContainer = document.getElementById("history-container");
+    const commentElement = document.createElement("p");
+    commentElement.classList.add("history-style");
+    commentElement.innerHTML = fullComment;
+
+    commentContainer.appendChild(commentElement); 
+})
+
+// glassDoar
+document.getElementById("glassDoar").addEventListener('click', function(){
+    const addDarkTask = document.getElementById("improveJob").innerText;
+    const currentTime = new Date().toLocaleTimeString();
+
+    const fullComment = `You have Complete The Task <strong>${addDarkTask}</strong> at ${currentTime}`;
+
+    const commentContainer = document.getElementById("history-container");
+    const commentElement = document.createElement("p");
+    commentElement.classList.add("history-style");
+    commentElement.innerHTML = fullComment;
+
+    commentContainer.appendChild(commentElement); 
+})
+
+// clear history 
+const clear = document.getElementById("clearHistory");
+clear.addEventListener('click', function(event){
+    event.preventDefault();
+    const commentContainer = document.getElementById("history-container");
+    const removeAllHistory = commentContainer.querySelectorAll('.history-style')
+
+    for (const history of removeAllHistory){
+        history.remove();
+    }
+})
