@@ -1,24 +1,41 @@
-// adding theme color changer for theme btn
-// document
-// .getElementById("colorChanger")
-// .addEventListener('click', function(event){
-//     event.preventDefault();
-//     document.body.style.backgroundColor = 'green' 
-//     console.log('moshiur');
-// });
 
-// shopEase completed button
+// today date
+const date = new Date();
+const newDate = date.toDateString();
+document.getElementById("todayDate").innerText = newDate;
 
-function buttonClicker(){
-    alert("Board Update Successfully");
-    // task assigned
-    const taskAssigned = document.getElementById("taskAssigned").innerText;
-    const convertedTask = parseInt(taskAssigned) - 1;
-    document.getElementById("taskAssigned").innerText = convertedTask;
-    // header number
-    const headerNum = document.getElementById("headerNumber").innerText;
-    const convertedNumber = parseInt(headerNum) + 1;
-    document.getElementById("headerNumber").innerText = convertedNumber;
-    document.getElementById("ShopEase").disabled = true;
+// a function for all buttons
 
+let completedButton = 0;
+
+function allInOne(countedBtn) {
+  alert("Board Update Successfullly");
+  // task assigned
+  const taskAssigned = document.getElementById("taskAssigned").innerText;
+  const convertedTask = parseInt(taskAssigned) - 1;
+  document.getElementById("taskAssigned").innerText = convertedTask;
+  // header number
+  const headerNum = document.getElementById("headerNumber").innerText;
+  const convertedNumber = parseInt(headerNum) + 1;
+  document.getElementById("headerNumber").innerText = convertedNumber;
+//   add task
+    
+
+  //   button disable
+  document.getElementById(countedBtn).disabled =true;
+
+  completedButton++;
+
+  if (completedButton === 6){
+    alert('Congratulations!! You have completed all the current task.')
+  }
 }
+
+const completeBtn = ["ShopEase", "cloudSync", "swiftPay", "metaID", "googleLLC", "glassDoar"];
+for (let countedBtn of completeBtn){
+    document.getElementById(countedBtn).addEventListener('click', function(event){
+        event.preventDefault();
+        allInOne(countedBtn);
+    });
+}
+
