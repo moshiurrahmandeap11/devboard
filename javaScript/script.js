@@ -32,7 +32,10 @@ function allInOne(countedBtn) {
   document.getElementById("headerNumber").innerText = convertedNumber;
 
   //   button disable
-  document.getElementById(countedBtn).disabled =true;
+  const buttonDisabled = document.getElementById(countedBtn);
+  buttonDisabled.disabled = true;
+  buttonDisabled.classList.add('bg-gray-400');
+
 
   completedButton++;
 
