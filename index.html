@@ -90,20 +90,130 @@
         <div>
           <button
             id="header-back-button"
-            class="btn px-4 py-3 bg-[#3752fd] text-white font-medium"
+            class="btn px-4 py-3 bg-[#3752fd] text-white font-medium hover:bg-[#3752fd]"
           >
-            Back Panel
+            Back to Desk
           </button>
         </div>
       </nav>
     </header>
     <!-- main section -->
+    <!-- section second -->
     <section
+      id="section-second"
+      class="absolute top-36 w-11/12 lg:w-10/12 mx-auto left-1/2 -translate-x-1/2"
+    >
+      <h2 class="font-semibold text-xl lg:text-3xl text-center mb-6">Blogs</h2>
+      <!-- first question -->
+      <div class="bg-white p-6 rounded-xl shadow-lg mb-4 hover:shadow-xl">
+        <h2 class="font-bold text-base lg:text-xl">
+          Question-1: What are the different ways to select an element in the
+          DOM?
+        </h2>
+        <hr id="dashedID" class="dashed-line" />
+        <p>There are multiple ways to select an element in the DOM.</p>
+        <ul class="list-disc list-inside">
+          <li>ByID ==> getElementById()</li>
+          <li>ByClassName ==> getElementsByClassName()</li>
+          <li>ByTagName ==> getElementsByTagName()</li>
+          <li>QuerySelector ==> querySelector()</li>
+          <li>QuerySelectorAll ==> querySelectorAll()</li>
+        </ul>
+      </div>
+      <!-- second question -->
+      <div class="bg-white p-6 rounded-xl shadow-lg mb-4 hover:shadow-xl">
+        <h2 class="font-bold text-base lg:text-xl">
+          Question-2: What is the difference between innerHTML, innerText, and
+          textContent ?
+        </h2>
+        <hr id="dashedID" class="dashed-line" />
+        <p>
+          There are few difference between innerHTML, innerText, textContent.
+        </p>
+        <ul class="list-disc list-inside">
+          <li>
+            <strong>innerHTML</strong> use to set html element from javaScript
+            ex. getElementById("example").innerHTML = example code;
+          </li>
+          <li>
+            <strong>innerText</strong> use to get text from other element like
+            h1,h2,p and also it can set a text for a element ex.
+            getElementById("example").innerText
+          </li>
+          <li>
+            <strong>textContent</strong> is used to get or set the text inside
+            an element, including hidden text. ex.
+            getElementById("example").textContent
+          </li>
+        </ul>
+      </div>
+      <!-- third question -->
+      <div class="bg-white p-6 rounded-xl shadow-lg mb-4 hover:shadow-xl">
+        <h2 class="font-bold text-base lg:text-xl">
+          Question-3: What is event delegation in the DOM?
+        </h2>
+        <hr id="dashedID" class="dashed-line" />
+        <p>
+          <strong>Event delegation </strong> is a javaScript element which is
+          used to add a single event listener to a parent element instead of
+          multiple event listener to individual child elements.
+        </p>
+        <p>why we will use <strong>event delegation</strong> ?</p>
+        <ul class="list-disc list-inside">
+          <li>Avoid multiple event listener.</li>
+          <li>Only one event listener instead of many.</li>
+          <li>Works Dynamically.</li>
+        </ul>
+      </div>
+      <!-- fourth question -->
+      <div class="bg-white p-6 rounded-xl shadow-lg mb-4 hover:shadow-xl">
+        <h2 class="font-bold text-base lg:text-xl">
+          Question-4: What is event bubbling in the DOM?
+        </h2>
+        <hr id="dashedID" class="dashed-line" />
+        <p>
+          <strong>Event bubbling</strong> is a mechanism in the DOM where, when
+          an event is triggered on an element, it bubbles up through the DOM
+          tree. In other words, if a click happens on a child element, that
+          event will also be triggered on its parent element.
+        </p>
+      </div>
+      <!-- fifth question -->
+      <div class="bg-white p-6 rounded-xl shadow-lg mb-4 hover:shadow-xl">
+        <h2 class="font-bold text-base lg:text-xl">
+          Question-5: How do you create, add, and remove elements using
+          JavaScript?
+        </h2>
+        <hr id="dashedID" class="dashed-line" />
+        <p>
+          In below some example of create , add and remove elements using
+          javaScript.
+        </p>
+        <ul class="list-disc list-inside">
+          <li>
+            <strong>createElement</strong> ==>
+            document.getElementById("example").
+          </li>
+          <li>
+            <strong>addElement</strong> ==> const parentDiv =
+            document.getElementById("example") \n
+            parentDiv.appendchild(exampleElement)
+          </li>
+          <li>
+            <strong>removeElement</strong> ==>
+            parentDiv.removeChild(exampleElement)
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- first section -->
+    <section
+      id="section-first"
       class="absolute top-36 w-11/12 lg:w-10/12 mx-auto left-1/2 -translate-x-1/2 flex flex-col lg:flex-row gap-6"
     >
       <!-- top 3 items -->
       <div class="bg-white p-6 rounded-3xl shadow-2xl">
-        <div>
+        <div id="first-part">
           <div
             class="flex flex-col lg:flex-row justify-center lg:justify-evenly gap-6"
           >
@@ -155,8 +265,9 @@
             </div>
           </div>
         </div>
+
         <!-- 6 items -->
-        <hr class="dashed-line" />
+        <hr id="dashedID" class="dashed-line" />
         <div id="main-body" class="grid grid-cols-1 lg:grid-cols-3 gap-7">
           <!-- box 1 -->
           <div class="bg-[#f4f7ff] p-4 rounded-2xl">
@@ -330,8 +441,6 @@
             </div>
           </div>
         </div>
-        <!-- question part -->
-        <div></div>
       </div>
       <!-- history part -->
       <div class="bg-white p-4 rounded-3xl shadow-2xl lg:w-3/12 mb-10 lg:mb-0">

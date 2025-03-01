@@ -1,4 +1,5 @@
 document.getElementById("header-back-button").style.display = 'none';
+document.getElementById("section-second").style.display = 'none';
 
 // background changer
 
@@ -151,17 +152,18 @@ clear.addEventListener('click', function(event){
 const discover = document.getElementById("discover-something");
 discover.addEventListener('click', function(event){
     event.preventDefault();
+    document.getElementById('section-first').style.visibility = 'hidden'
     document.getElementById("headerNumberID").style.visibility = 'hidden';
     document.getElementById("colorChangerID").style.visibility = 'hidden';
     document.getElementById("header-back-button").style.display = "block";
-    document.getElementById("main-body").style.visibility = 'hidden';
+    document.getElementById("section-second").style.display = "block";
 })
 
 const headerButton = document.getElementById('header-back-button');
 headerButton.addEventListener('click', function(event){
     event.preventDefault();
+    document.getElementById("section-first").style.visibility = "visible";
     document.getElementById("headerNumberID").style.visibility = 'visible';
     document.getElementById("colorChangerID").style.visibility = 'visible';
     document.getElementById("header-back-button").style.display = 'none';
-    document.getElementById("main-body").style.visibility = 'visible';
 })
