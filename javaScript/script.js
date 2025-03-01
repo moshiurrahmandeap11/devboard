@@ -2,7 +2,11 @@ document.getElementById("header-back-button").style.display = 'none';
 document.getElementById("section-second").style.display = 'none';
 
 // background changer
-
+const backgroundChanger = document.getElementById("colorChangerID");
+backgroundChanger.addEventListener('click', function(event){
+    event.preventDefault();
+    document.body.style.backgroundColor = 'green'
+})
 // today date
 const date = new Date();
 const newDate = date.toDateString();
@@ -166,4 +170,5 @@ headerButton.addEventListener('click', function(event){
     document.getElementById("headerNumberID").style.visibility = 'visible';
     document.getElementById("colorChangerID").style.visibility = 'visible';
     document.getElementById("header-back-button").style.display = 'none';
+    document.getElementById("section-second").style.display = "none";
 })
