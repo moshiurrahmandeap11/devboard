@@ -1,3 +1,6 @@
+document.getElementById("header-back-button").style.display = 'none';
+
+// background changer
 
 // today date
 const date = new Date();
@@ -141,4 +144,24 @@ clear.addEventListener('click', function(event){
     for (const history of removeAllHistory){
         history.remove();
     }
+})
+
+
+// discover something toggle button
+const discover = document.getElementById("discover-something");
+discover.addEventListener('click', function(event){
+    event.preventDefault();
+    document.getElementById("headerNumberID").style.visibility = 'hidden';
+    document.getElementById("colorChangerID").style.visibility = 'hidden';
+    document.getElementById("header-back-button").style.display = "block";
+    document.getElementById("main-body").style.visibility = 'hidden';
+})
+
+const headerButton = document.getElementById('header-back-button');
+headerButton.addEventListener('click', function(event){
+    event.preventDefault();
+    document.getElementById("headerNumberID").style.visibility = 'visible';
+    document.getElementById("colorChangerID").style.visibility = 'visible';
+    document.getElementById("header-back-button").style.display = 'none';
+    document.getElementById("main-body").style.visibility = 'visible';
 })
