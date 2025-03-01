@@ -5,7 +5,11 @@ document.getElementById("section-second").style.display = 'none';
 const backgroundChanger = document.getElementById("colorChangerID");
 backgroundChanger.addEventListener('click', function(event){
     event.preventDefault();
-    document.body.style.backgroundColor = 'green'
+    const red = Math.floor(Math.random() * 256);
+    const green = Math.floor(Math.random() * 256);
+    const blue = Math.floor(Math.random() * 256);
+    document.body.style.background =
+      "rgb(" + red + ", " + green + ", " + blue + ")";
 })
 // today date
 const date = new Date();
